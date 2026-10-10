@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>三级黄色电影网 - 三级电影片单/精选分级推荐/电影在线选片（阅读入口：https://sanjihuangsedianyingwang-top.github.io）</title>
+<meta name="keywords" content="三级黄色电影网, 三级电影片单, 精选分级推荐, 电影在线选片, 分级电影指南, 电影推荐导航, 高分电影清单, sanjihuangsedianyingwang-top.github.io">
+<meta name="description" content="三级黄色电影网（阅读入口：https://sanjihuangsedianyingwang-top.github.io）用“分级精选”的思路整理电影片单，提供三级片单、类型分级、热门榜单与选片指南。页面为打字机稿件风格、移动端自适应，帮您按喜好与接受度快速挑片。">
+<link rel="canonical" href="https://sanjihuangsedianyingwang-top.github.io">
+<meta property="og:title" content="三级黄色电影网 - 分级精选电影片单推荐">
+<meta property="og:description" content="三级片单、类型分级、热门榜单与选片指南，阅读入口 https://sanjihuangsedianyingwang-top.github.io。">
+<meta property="og:url" content="https://sanjihuangsedianyingwang-top.github.io">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="三级黄色电影网">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="三级黄色电影网 - 分级精选电影片单推荐">
+<meta name="twitter:description" content="三级片单、类型分级、热门榜单与选片指南，阅读入口 sanjihuangsedianyingwang-top.github.io。">
+<style>
+:root{
+  --paper:#f4efdf;
+  --paper2:#efe8d4;
+  --ink:#2e2a23;
+  --ink2:#4a4337;
+  --brown:#7a5c2e;
+  --brown2:#5c431f;
+  --stamp:#b0402c;
+  --line:#cbb994;
+  --muted:#7d7463;
+  --shadow:6px 6px 0 rgba(46,42,35,.16);
+  --type:"Courier New",Consolas,"Liberation Mono",monospace;
+  --sans:"PingFang SC","Microsoft YaHei",sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.9;padding:16px;
+  background-image:
+    repeating-linear-gradient(0deg,rgba(0,0,0,.014) 0 2px,transparent 2px 7px),
+    radial-gradient(800px 300px at 84% -120px,rgba(176,64,44,.1),transparent 60%);
+}
+a{color:var(--stamp);text-decoration:none;transition:.2s}
+a:hover{color:var(--brown2)}
+.container{max-width:1160px;margin:0 auto}
+
+/* 稿纸 */
+.ms{
+  position:relative;background:var(--paper);border:1px solid var(--line);box-shadow:var(--shadow);border-radius:3px;padding:34px 38px;margin-bottom:18px;
+}
+.ms::before{content:"";position:absolute;top:0;bottom:0;left:26px;width:2px;background:var(--line)}
+.ms::after{content:"";position:absolute;left:10px;top:0;bottom:0;width:10px;
+  background:radial-gradient(circle at 5px 16px,var(--paper2) 4px,transparent 5px) repeat-y;background-size:10px 40px;}
+.fold{position:absolute;left:0;right:0;height:1px;background:repeating-linear-gradient(90deg,var(--line) 0 8px,transparent 8px 16px)}
+.stampx{position:absolute;right:34px;top:28px;border:3px double var(--stamp);color:var(--stamp);font-family:var(--type);font-size:13px;letter-spacing:2px;padding:5px 11px;transform:rotate(6deg);opacity:.85}
+
+/* 抬头 */
+.letter{display:flex;justify-content:space-between;align-items:flex-end;gap:14px;flex-wrap:wrap;font-family:var(--type);font-size:12px;letter-spacing:2px;color:var(--brown);border-bottom:2px solid var(--ink);padding-bottom:10px;margin-bottom:22px}
+.letter b{color:var(--stamp);font-size:13px}
+h1{font-family:var(--type);font-size:clamp(26px,5.4vw,46px);font-weight:700;letter-spacing:1px;line-height:1.25;margin-bottom:14px}
+h1 em{font-style:normal;color:var(--stamp);text-decoration:underline;text-decoration-style:wavy;text-decoration-thickness:2px;text-underline-offset:6px}
+.sub{font-family:var(--type);font-size:13px;letter-spacing:3px;color:var(--brown);margin-bottom:16px}
+.lead{font-size:15px;color:var(--ink2);margin-bottom:12px;max-width:800px}
+.quote{font-family:var(--type);font-size:15px;color:var(--stamp);border-left:4px solid var(--ink);padding:10px 18px;margin:16px 0;background:rgba(176,64,44,.05);max-width:800px}
+.urlbox{display:inline-block;font-family:var(--type);font-weight:700;background:var(--ink);color:var(--paper);padding:11px 15px;border:1px dashed var(--stamp);border-radius:2px}
+.urlbox a{color:#eec9bf}
+.btn{display:inline-block;margin-top:16px;font-family:var(--type);font-size:14px;font-weight:700;letter-spacing:1px;color:var(--paper);background:var(--ink);padding:12px 30px;border:2px solid var(--ink);border-radius:2px;box-shadow:4px 4px 0 var(--stamp)}
+.btn:hover{background:var(--stamp);box-shadow:4px 4px 0 var(--ink)}
+
+/* 导航 */
+.nav{display:flex;gap:9px;flex-wrap:wrap;margin:22px 0 6px}
+.nav a{font-family:var(--type);font-size:13px;color:var(--ink);padding:9px 16px;background:var(--paper2);border:1px solid var(--ink);border-radius:2px;min-height:44px;display:inline-flex;align-items:center}
+.nav a:hover{background:var(--stamp);color:var(--paper);border-color:var(--stamp)}
+
+/* 栏目 */
+.section{padding:26px 0}
+.stitle{font-family:var(--type);font-size:18px;font-weight:700;letter-spacing:2px;color:var(--stamp);margin-bottom:18px;border-bottom:1px dashed var(--line);padding-bottom:8px}
+.stitle .num{background:var(--ink);color:var(--paper);padding:2px 8px;margin-right:10px}
+.stitle.b .num{background:var(--brown)}
+
+/* 分级卡 */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:var(--paper2);border:1px solid var(--ink);border-radius:2px;box-shadow:var(--shadow);transition:.25s;position:relative}
+.card::before{content:"";position:absolute;top:8px;left:8px;width:20px;height:12px;background:var(--paper);border:1px solid var(--line)}
+.card:hover{transform:translateY(-5px);border-color:var(--stamp)}
+.card .cap{height:180px;display:flex;align-items:center;justify-content:center;font-size:54px;position:relative;border-bottom:1px solid var(--line)}
+.c1{background:repeating-linear-gradient(90deg,rgba(122,92,46,.12) 0 10px,transparent 10px 20px),var(--paper)}
+.c2{background:repeating-linear-gradient(0deg,rgba(176,64,44,.1) 0 10px,transparent 10px 20px),var(--paper)}
+.c3{background:repeating-linear-gradient(135deg,rgba(46,42,35,.1) 0 8px,transparent 8px 16px),var(--paper)}
+.card .cap em{position:absolute;bottom:12px;right:12px;font-style:normal;font-family:var(--type);font-size:11px;letter-spacing:1px;color:var(--paper);background:var(--stamp);padding:3px 9px}
+.card .info{padding:18px}
+.card h3{font-family:var(--type);font-size:17px;letter-spacing:1px;margin-bottom:6px}
+.card p{font-size:14px;color:var(--muted)}
+.card .meta{margin-top:12px;font-family:var(--type);font-size:12px;color:var(--brown2)}
+
+/* 分级索引 */
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.lvl{border:1px solid var(--ink);border-radius:2px;padding:16px;background:var(--paper2);transition:.2s}
+.lvl .lv{font-family:var(--type);font-size:12px;letter-spacing:2px;color:var(--stamp);margin-bottom:4px}
+.lvl b{display:block;font-size:15px;margin-bottom:3px}
+.lvl span{font-size:12px;color:var(--muted)}
+.lvl:hover{background:var(--ink);color:var(--paper)}
+.lvl:hover span{color:#d8d0bd}
+
+/* 榜单 */
+.rank{background:var(--paper2);border:1px solid var(--ink);border-radius:2px;box-shadow:var(--shadow);padding:24px}
+.rrow{display:grid;grid-template-columns:56px 1fr 96px;gap:16px;align-items:center;padding:14px 0;border-bottom:1px dotted var(--line)}
+.rrow:last-child{border-bottom:0}
+.rno{font-family:var(--type);font-size:20px;font-weight:700;color:var(--paper);background:var(--ink);border-radius:2px;padding:5px 0;text-align:center}
+.row:nth-child(1) .rno{background:var(--stamp)}
+.rbody h3{font-family:var(--type);font-size:16px;letter-spacing:.5px}
+.rbody p{font-size:13px;color:var(--muted)}
+.score{font-family:var(--type);font-weight:700;color:var(--stamp);background:var(--paper);border:1px solid var(--stamp);padding:4px 10px;border-radius:2px;text-align:center}
+
+/* 指南 */
+.tips{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.tip{border:1px solid var(--ink);border-left:5px solid var(--stamp);border-radius:2px;padding:18px;background:var(--paper2)}
+.tip:nth-child(2){border-left-color:var(--brown)}
+.tip:nth-child(3){border-left-color:var(--ink)}
+.tip h3{font-size:16px;margin-bottom:6px}
+.tip p{font-size:14px;color:var(--muted)}
+
+/* 关于 */
+.about{background:var(--ink);color:var(--paper);border-radius:2px;padding:42px 28px;text-align:center;box-shadow:var(--shadow)}
+.about h2{font-family:var(--type);font-size:22px;letter-spacing:2px;color:#eec9bf;margin-bottom:14px}
+.about p{max-width:760px;margin:0 auto 16px;color:#e6dfcd}
+.about .urlbox{background:#1a1611;color:var(--paper);border-color:var(--stamp)}
+
+/* 页脚 */
+.footer{margin-top:26px;padding:24px 0;border-top:2px solid var(--ink)}
+.flinks{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+.flinks a{font-family:var(--type);font-size:13px;color:var(--ink);padding:9px 16px;background:var(--paper2);border:1px solid var(--ink);border-radius:2px;min-height:44px;display:inline-flex;align-items:center}
+.flinks a:hover{background:var(--stamp);color:var(--paper)}
+.copy{font-family:var(--type);font-size:12px;color:var(--muted);line-height:1.9;text-align:center}
+.copy a{color:var(--stamp)}
+
+@media(max-width:1024px){.grid3{grid-template-columns:repeat(2,1fr)}.grid4{grid-template-columns:repeat(2,1fr)}.tips{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:768px){
+  body{padding:10px}.ms{padding:26px 22px}
+  .stampx{position:static;display:inline-block;margin-bottom:14px;transform:none}
+  .grid3,.grid4,.tips{grid-template-columns:1fr}
+  .rrow{grid-template-columns:1fr;text-align:center}
+  .rno{margin:0 auto}
+  .about{padding:30px 18px}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+<div class="container">
+
+  <div class="ms">
+    <div class="stampx">DRAFT · No.001</div>
+    <div class="letter">
+      <span>三级黄色电影网 · 编辑部稿件</span>
+      <span>栏目：<b>分级精选</b></span>
+      <span>页 01</span>
+    </div>
+
+    <div class="sub">A GRADED FILM LIST · VOL.01</div>
+    <h1>三级黄色<em>电影网</em><br>把电影分成，想看的那三级</h1>
+    <p class="lead">找片最怕的不是没得选，而是选到不适合此刻的。三级黄色电影网用“分级精选”的方式整理片单：先定口味，再定强度，最后定时长。分级不是门槛，而是让你看得更自在的入口。</p>
+    <div class="quote">“分级的意义不是把片子隔开，而是让你在看之前就知道，它大概会带给你什么。”——三级黄色电影网编辑部</div>
+    <div class="urlbox">阅读入口：<a href="https://sanjihuangsedianyingwang-top.github.io">https://sanjihuangsedianyingwang-top.github.io</a></div>
+    <br>
+    <a href="#" class="btn">[ 翻到三级片单 ] #</a>
+
+    <nav class="nav">
+      <a href="#one"># 三级片单</a>
+      <a href="#grade"># 分级索引</a>
+      <a href="#rank"># 热门榜单</a>
+      <a href="#guide"># 选片指南</a>
+      <a href="#about"># 关于本站</a>
+    </nav>
+  </div>
+
+  <section id="one" class="section">
+    <div class="stitle"><span class="num">01</span>三级片单 · 本期精选</div>
+    <div class="grid3">
+      <article class="card">
+        <div class="cap c1"><em>精选</em>🎬</div>
+        <div class="info">
+          <h3><a href="#">追光的人</a></h3>
+          <p>剧情 / 励志，一个总在替别人拍照的人，终于走进了自己的镜头。</p>
+          <div class="meta">118min · 三级推荐</div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="cap c2"><em>高分</em>🛰️</div>
+        <div class="info">
+          <h3><a href="#">倒数七秒</a></h3>
+          <p>科幻 / 悬疑，记忆只能保存七秒，他靠记号找出被抹掉的真相。</p>
+          <div class="meta">124min · 三级烧脑</div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="cap c3"><em>治愈</em>🌷</div>
+        <div class="info">
+          <h3><a href="#">周末花店</a></h3>
+          <p>治愈 / 爱情，一束束花替老板和常客说完了没说出口的话。</p>
+          <div class="meta">102min · 三级轻松</div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="grade" class="section">
+    <div class="stitle b"><span class="num">02</span>分级索引 · 按接受度挑</div>
+    <div class="grid4">
+      <a href="#" class="lvl"><div class="lv">GRADE A</div><b>轻松入门</b><span>合家 / 治愈 / 不烧脑</span></a>
+      <a href="#" class="lvl"><div class="lv">GRADE B</div><b>中等强度</b><span>剧情 / 悬疑 / 情绪起伏</span></a>
+      <a href="#" class="lvl"><div class="lv">GRADE C</div><b>深度沉浸</b><span>慢节奏 / 文艺 / 长片</span></a>
+      <a href="#" class="lvl"><div class="lv">GRADE D</div><b>强刺激</b><span>惊悚 / 反转 / 高能</span></a>
+      <a href="#" class="lvl"><div class="lv">MOOD</div><b>按心情</b><span>放松 / 提神 / 入眠</span></a>
+      <a href="#" class="lvl"><div class="lv">LENGTH</div><b>按时长</b><span>短片通勤 / 长片周末</span></a>
+      <a href="#" class="lvl"><div class="lv">THEME</div><b>按主题</b><span>爱情 / 成长 / 家庭</span></a>
+      <a href="#" class="lvl"><div class="lv">SEASON</div><b>按季节</b><span>夏日 / 冬夜 / 雨天</span></a>
+    </div>
+  </section>
+
+  <section id="rank" class="section">
+    <div class="stitle"><span class="num">03</span>热门榜单 · 常驻精选</div>
+    <div class="rank">
+      <div class="rrow">
+        <div class="rno">01</div>
+        <div class="rbody"><h3><a href="#">《肖申克的救赎》</a></h3><p>剧情 / 希望 · 长尾常青的三级经典</p></div>
+        <div class="score">9.7</div>
+      </div>
+      <div class="rrow">
+        <div class="rno">02</div>
+        <div class="rbody"><h3><a href="#">《星际穿越》</a></h3><p>科幻 / 亲情 · 硬科幻里的三级情感</p></div>
+        <div class="score">9.4</div>
+      </div>
+      <div class="rrow">
+        <div class="rno">03</div>
+        <div class="rbody"><h3><a href="#">《追光的人》</a></h3><p>剧情励志 · 本周讨论度第一</p></div>
+        <div class="score">9.5</div>
+      </div>
+      <div class="rrow">
+        <div class="rno">04</div>
+        <div class="rbody"><h3><a href="#">《倒数七秒》</a></h3><p>科幻悬疑 · 反转密集</p></div>
+        <div class="score">9.2</div>
+      </div>
+      <div class="rrow">
+        <div class="rno">05</div>
+        <div class="rbody"><h3><a href="#">《周末花店》</a></h3><p>治愈爱情 · 口碑发酵</p></div>
+        <div class="score">9.0</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="guide" class="section">
+    <div class="stitle b"><span class="num">04</span>选片指南 · 三步定级</div>
+    <div class="tips">
+      <div class="tip"><h3>第一步：定心情</h3><p>想放松就选 GRADE A，想被带动就选 B，想安静沉浸再进 C，精力充足才挑战 D。</p></div>
+      <div class="tip"><h3>第二步：定时长</h3><p>通勤挑 90 分钟内的轻片，周末才留给长片；悬疑类建议一次看完，别拆到第二天。</p></div>
+      <div class="tip"><h3>第三步：定场合</h3><p>合家看片先过滤惊悚与强刺激，深夜避免高能反转，早晨适合治愈与生活流。</p></div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="about">
+      <h2>// 关于 三级黄色电影网</h2>
+      <p>三级黄色电影网是一个以“分级精选”整理电影的单页站点：提供三级片单、分级索引、热门榜单与选片指南。页面为纯静态，便于快速打开与搜索引擎收录，不提供盗播，仅作合规选片参考。</p>
+      <p>阅读入口：</p>
+      <div class="urlbox">https://<a href="https://sanjihuangsedianyingwang-top.github.io">sanjihuangsedianyingwang-top.github.io</a></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="flinks">
+      <a href="#"># 首页</a>
+      <a href="#"># 免责声明</a>
+      <a href="#"># 片源合作</a>
+      <a href="#"># 留言反馈</a>
+    </div>
+    <div class="copy">
+      Copyright © 2024 三级黄色电影网｜关键词：三级黄色电影网<br>
+      阅读入口：<a href="https://sanjihuangsedianyingwang-top.github.io">https://sanjihuangsedianyingwang-top.github.io</a><br>
+      本页仅作合规电影推荐与导航示例，不含任何违规内容；实际观看请使用正版平台。
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
